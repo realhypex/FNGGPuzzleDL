@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "FNGGPuzzleDL",
+  "version": "1.0.0",
+  "description": "Adds PNG download buttons to the Fortnite.gg Shattered puzzle.",
+  "action": {
+    "default_title": "FNGGPuzzleDL"
+  },
+  "host_permissions": [
+    "https://fortnite.gg/*",
+    "https://www.fortnite.gg/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://fortnite.gg/shattered*",
+        "https://www.fortnite.gg/shattered*"
+      ],
+      "js": [
+        "src/puzzle-download.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
